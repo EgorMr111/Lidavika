@@ -19,29 +19,30 @@
             color: #ff0055;
             overflow-x: hidden;
             text-align: center;
-            padding: 10px;
-            animation: bgFlash 4s infinite alternate;
+            padding: 5px;
+            animation: bgFlash 2s infinite alternate;
         }
 
         @keyframes bgFlash {
             0% { background-color: #050000; }
-            50% { background-color: #1a0005; }
+            50% { background-color: #2b000a; }
             100% { background-color: #050000; }
         }
 
-        /* Вирвиоко рамка навколо всього екрана */
+        /* Біжучий рядок зверху */
         body::before {
-            content: " 💀 🤡 😭 💔 💀 🤡 😭 💔 💀 🤡 😭 💔 💀 🤡 😭 💔 💀 🤡 😭 💔 ";
+            content: " 💀 КРИНЖ НА МАКСИМАЛКАХ 🤡 ХВАТИТ ТВОРИТЬ ХУЙНЮ 💔 💀 КРИНЖ НА МАКСИМАЛКАХ 🤡 ";
             position: fixed;
             top: 0; left: 0; width: 100%;
             background: #ff0000;
             color: #ffff00;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
             z-index: 9999;
             overflow: hidden;
             white-space: nowrap;
-            animation: marquee 8s linear infinite;
+            animation: marquee 6s linear infinite;
+            padding: 3px 0;
         }
 
         @keyframes marquee {
@@ -51,81 +52,94 @@
 
         .container {
             max-width: 800px;
-            margin: 40px auto 20px auto;
-            border: 8px dashed #00ff00;
-            padding: 20px;
+            margin: 35px auto 20px auto;
+            border: 6px dashed #00ff00;
+            padding: 15px;
             background: #110011;
-            box-shadow: 0 0 50px #ff0000;
-            transform: rotate(-0.5deg);
+            box-shadow: 0 0 40px #ff0000;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: #00ffff;
-            text-shadow: 4px 4px #ff0000, -4px -4px #00ff00;
-            margin-top: 15px;
-            margin-bottom: 15px;
-            animation: textPulse 0.5s infinite alternate;
-        }
-
-        @keyframes textPulse {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.02); }
+            text-shadow: 3px 3px #ff0000, -3px -3px #00ff00;
+            margin-top: 10px;
+            margin-bottom: 12px;
+            word-break: break-word;
+            line-height: 1.2;
         }
 
         .subtitle {
-            font-size: 1.3rem;
-            color: #ffff00;
+            font-size: 1.1rem;
             background: #ff00ff;
             color: #000;
             padding: 10px;
             font-weight: bold;
-            margin-bottom: 30px;
-            border: 3px dotted #00ffff;
+            margin-bottom: 20px;
+            border: 3px dotted #ffff00;
+            word-break: break-word;
+        }
+
+        /* Інтерактивний лічильник психозу */
+        .counter-box {
+            background: #220000;
+            border: 4px solid #ffcc00;
+            color: #ffcc00;
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 4px 4px #ff0000;
+            transition: transform 0.1s;
+        }
+
+        .counter-box:active {
+            transform: scale(0.95);
+        }
+
+        #rageCount {
+            color: #ff0000;
+            font-size: 1.4rem;
+            background: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
         }
 
         /* Карточки дівчат */
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
         }
 
         .card {
             background: #220022;
-            border: 5px solid #ffff00;
-            padding: 15px;
-            border-radius: 15px;
-            box-shadow: 8px 8px #00ff00;
-            transform: rotate(1deg);
-            transition: 0.2s;
-        }
-
-        .card:nth-child(2) {
-            transform: rotate(-1.5deg);
-            border-color: #ff00ff;
-            box-shadow: -8px 8px #00ffff;
+            border: 4px solid #ffff00;
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 6px 6px #00ff00;
         }
 
         .img-wrap {
             width: 100%;
-            height: 280px;
-            border: 4px solid #ff0000;
+            height: 260px;
+            border: 3px solid #ff0000;
             overflow: hidden;
             background: #000;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .img-wrap img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: contrast(150%) hue-rotate(15deg);
+            filter: contrast(160%) hue-rotate(20deg);
         }
 
         .card-caption {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #00ffcc;
             background: #330033;
             padding: 10px;
@@ -137,21 +151,21 @@
         .section-bad {
             background: #ff0000;
             color: #ffff00;
-            border: 6px solid #00ffff;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 0 30px #00ff00;
+            border: 4px solid #00ffff;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 25px #00ff00;
         }
 
         .section-bad h2 {
-            font-size: 2rem;
-            margin-bottom: 15px;
+            font-size: 1.6rem;
+            margin-bottom: 12px;
             text-shadow: 2px 2px #000;
         }
 
         .bad-list {
             list-style: none;
-            font-size: 1.2rem;
+            font-size: 1.05rem;
             font-weight: bold;
         }
 
@@ -161,39 +175,40 @@
             margin: 8px 0;
             padding: 10px;
             border: 2px solid #ffff00;
-            transform: skew(-2deg);
+            text-align: left;
+            word-break: break-word;
         }
 
         /* Червоний вердикт */
         .verdict-box {
             background: #990000;
-            border: 10px dashed #ffff00;
+            border: 6px dashed #ffff00;
             color: #ffffff;
-            padding: 30px;
-            font-size: 2rem;
+            padding: 15px;
+            font-size: 1.6rem;
             font-weight: bold;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
             text-shadow: 3px 3px #000;
-            animation: shake 0.3s infinite;
+            word-break: break-word;
+            animation: pulseText 0.8s infinite alternate;
         }
 
-        @keyframes shake {
-            0% { transform: translate(1px, 1px) rotate(0deg); }
-            20% { transform: translate(-2px, 0px) rotate(1deg); }
-            40% { transform: translate(1px, -1px) rotate(-1deg); }
-            60% { transform: translate(-1px, 2px) rotate(0deg); }
-            80% { transform: translate(2px, 1px) rotate(1deg); }
-            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        @keyframes pulseText {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.03); }
         }
 
         /* Кнопка що тікає */
         .escape-area {
             position: relative;
             height: 120px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
+            border: 2px dotted #444;
+            background: #050005;
         }
 
         #runawayBtn {
@@ -201,29 +216,37 @@
             background: #00ff00;
             color: #000;
             font-family: 'Comic Sans MS', cursive;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: bold;
-            padding: 15px 30px;
-            border: 5px solid #ff0000;
+            padding: 14px 28px;
+            border: 4px solid #ff0000;
             cursor: pointer;
             box-shadow: 5px 5px #ff00ff;
             z-index: 10;
-            transition: top 0.1s, left 0.1s;
+            transition: top 0.08s, left 0.08s;
+            white-space: nowrap;
         }
 
         .footer-note {
-            font-size: 0.9rem;
-            color: #888888;
-            border-top: 2px dotted #444;
-            padding-top: 15px;
+            font-size: 0.85rem;
+            color: #aaa;
+            border-top: 2px dotted #555;
+            padding-top: 12px;
         }
 
-        /* Адаптив для телефонів */
+        /* Медіа-запити для ідеальної мобільної верстки */
         @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            .subtitle { font-size: 1rem; }
-            .verdict-box { font-size: 1.4rem; padding: 15px; }
-            .container { padding: 10px; margin-top: 30px; }
+            body { padding: 0; }
+            .container { margin: 25px 2px 10px 2px; padding: 8px; border-width: 4px; }
+            h1 { font-size: 1.6rem; }
+            .subtitle { font-size: 1rem; padding: 8px; }
+            .counter-box { font-size: 0.95rem; padding: 10px; }
+            .img-wrap { height: 220px; }
+            .card-caption { font-size: 0.9rem; padding: 8px; }
+            .section-bad h2 { font-size: 1.3rem; }
+            .bad-list li { font-size: 0.95rem; padding: 8px; }
+            .verdict-box { font-size: 1.3rem; padding: 12px; }
+            #runawayBtn { font-size: 1.1rem; padding: 10px 20px; }
         }
     </style>
 </head>
@@ -233,11 +256,15 @@
         <h1>ВОТ КАК ВЫГЛЯДЯТ ДВЕ БЛЯДИ, КОТОРЫЕ МЕНЯ ОБИДЕЛИ</h1>
         <div class="subtitle">Я просто хотел нормально общаться, но вы решили устроить хуйню. 💀🤡😭💔</div>
 
+        <!-- Новий інтерактивний елемент: Клікер психозу -->
+        <div class="counter-box" id="rageBox">
+            🔥 Жми сюда, если тебя тоже это выбесило! Кликков психоза: <span id="rageCount">0</span>
+        </div>
+
         <div class="cards-grid">
             <!-- Перша дівчина -->
             <div class="card">
                 <div class="img-wrap">
-                    <!-- Замініть photo1.jpg на ваше фото -->
                     <img src="photo1.jpg" alt="Девушка 1">
                 </div>
                 <div class="card-caption">
@@ -248,7 +275,6 @@
             <!-- Друга дівчина -->
             <div class="card">
                 <div class="img-wrap">
-                    <!-- Замініть photo2.jpg на ваше фото -->
                     <img src="photo2.jpg" alt="Девушка 2">
                 </div>
                 <div class="card-caption">
@@ -272,7 +298,7 @@
             МОЙ ВЕРДИКТ: ИДИТЕ НАХУЙ 💀🤡🔥
         </div>
 
-        <div class="escape-area">
+        <div class="escape-area" id="escapeArea">
             <!-- Кнопка, яка тікає -->
             <button id="runawayBtn">Я ПРОСТИЛ</button>
         </div>
@@ -283,35 +309,44 @@
     </div>
 
     <script>
-        const btn = document.getElementById('runawayBtn');
-        const area = document.querySelector('.escape-area');
+        // Лічильник кліків
+        let count = 0;
+        const rageBox = document.getElementById('rageBox');
+        const rageCount = document.getElementById('rageCount');
 
-        // Функція щоб кнопка тікала від курсора / дотику
+        rageBox.addEventListener('click', () => {
+            count++;
+            rageCount.textContent = count;
+            if(count === 10) {
+                alert('ХУЯСЕ ТЕБЕ ПОРВАЛО! 😂 Осторожно, клавиатуру не сломай!');
+            }
+        });
+
+        // Логіка для кнопки що тікає
+        const btn = document.getElementById('runawayBtn');
+        const area = document.getElementById('escapeArea');
+
         function moveButton() {
             const areaRect = area.getBoundingClientRect();
             const btnRect = btn.getBoundingClientRect();
 
-            // Рандомні координати всередині блоку
-            const maxX = areaRect.width - btnRect.width - 20;
-            const maxY = areaRect.height - btnRect.height - 20;
+            const maxX = areaRect.width - btnRect.width - 10;
+            const maxY = areaRect.height - btnRect.height - 10;
 
-            const randomX = Math.max(10, Math.floor(Math.random() * maxX));
-            const randomY = Math.max(5, Math.floor(Math.random() * maxY));
+            const randomX = Math.max(5, Math.floor(Math.random() * maxX));
+            const randomY = Math.max(2, Math.floor(Math.random() * maxY));
 
             btn.style.left = randomX + 'px';
             btn.style.top = randomY + 'px';
         }
 
-        // Тікає при наведенні миші (для ПК)
         btn.addEventListener('mouseover', moveButton);
         
-        // Тікає при спробі натиснути (для телефонів)
         btn.addEventListener('touchstart', (e) => {
             e.preventDefault();
             moveButton();
         });
 
-        // На випадок якщо якимось дивом клікнуть
         btn.addEventListener('click', () => {
             alert('АХХАХАХ, ТЫ СЕРЬЕЗНО ДУМАЛ, ЧТО НАЖМЕШЬ?! ШИШ! 🖕😂');
             moveButton();
